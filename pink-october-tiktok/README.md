@@ -17,6 +17,7 @@ The designs were split into layers in code: a clean background, plus separate te
 cd source
 pip install numpy pillow opencv-python-headless   # ffmpeg is also required
 # convert images/N.webp -> srcN.png (RGBA PNG), then:
+mkdir -p l1 l2 l3
 python3 an2.py && python3 ex2.py && python3 ex1.py && python3 ex3.py
-mkdir -p l1 l2 l3 && python3 v1.py ../videos/1.mp4  # same for v2.py and v3.py
+python3 v1.py ../videos/1.mp4  # same for v2.py and v3.py
 ```
