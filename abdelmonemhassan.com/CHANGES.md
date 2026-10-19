@@ -62,6 +62,24 @@ Everything below is live unless marked **draft**. Backups of everything changed 
 - Left for a supervised update: Elementor 4.1.4 → 4.3.5, AIOSEO 4.9.10 → 5.0.3, TranslatePress 3.2.3 → 3.3.8
   (larger changes that can affect layout or settings), and WPS Hide Login (controls the login URL).
 
+## Round 3: remaining plugin updates (TranslatePress deliberately left alone)
+Safety net taken first: full database dump (`private-backups-moved-from-public_html/db-before-plugin-updates/`),
+a separate dump of the AIOSEO tables and options, a copy of each plugin folder, and a rendered snapshot of
+19 pages (EN/AR/ES): headings, every Elementor widget, images, links, forms, iframes, Stripe links, schema,
+title, description, canonical, robots and all visible text. Two snapshots in a row matched exactly.
+- Elementor 4.1.4 → 4.3.5: `wp elementor update db` ran only its per-version step (no data migration), CSS regenerated.
+  Elementor settings unchanged; all 15 Growth theme widgets still registered.
+- AIOSEO 4.9.10 → 5.0.3: all 591 per-page SEO rows, all settings, robots.txt, sitemaps and llms.txt identical;
+  the child theme's schema, robots and sitemap filters still apply.
+- WPS Hide Login 1.9.19 (custom login URL verified before and after), Akismet 5.7.2 and Disabled Source 1.8.3 (both inactive).
+- Result against the original snapshot: no difference on any page except that Elementor now labels its
+  heading/image/divider stylesheets as separate files (the same files were loaded before).
+- Log entries during the update window: one AIOSEO fatal and two warnings at the moment its files were being
+  replaced, and one Elementor cron notice during its DB step; none recur.
+- Elementor 4.3 bundles the WordPress MCP Adapter, whose default server logged 3 errors on every REST request.
+  Turned off with `add_filter( 'mcp_adapter_create_default_server', '__return_false' );` in growth-child/functions.php;
+  Elementor's own MCP server and the Novamira connector are unaffected. Log is clean since.
+
 ## Needs your decision or input
 1. Confirm these FAQ answers before publishing: campaigns run in the client's own ad accounts; ad spend is paid
    to the platform, not included in the fee; first 2–4 weeks are testing; you audit tracking before spending.
