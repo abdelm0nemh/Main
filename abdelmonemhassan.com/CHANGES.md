@@ -47,6 +47,21 @@ Everything below is live unless marked **draft**. Backups of everything changed 
   4532 reading competitor ads in Meta Ad Library / TikTok Creative Center / Google Ads Transparency Center,
   4533 creative fatigue, 4534 cheap vs quality leads. Each has a meta description, category, image and FAQ schema.
 
+## Round 2 (same day, on Monem's go-ahead)
+- FAQ section (11 questions) added to the live home page (page 28) rather than swapping the front page,
+  so the menu link, SEO settings and translations stay attached. Previous layout saved in the
+  `_monem_elementor_backup_20261019` meta and the server backup folder; the draft copy (4531) is now private.
+- The 3 articles are published.
+- Arabic: the machine translation spelled the name "مونيم"; it is now "منعم". The home title, FAQ heading and
+  questions, bio and About description now use "ميديا باير", marked as reviewed in TranslatePress.
+- Comments: all 67 ever received were spam waiting in moderation. They are in the spam folder, and comments
+  and pingbacks are closed on posts and pages.
+- Plugin updates, one at a time with a folder backup and an automatic rollback check: Limit Login Attempts 3.3.10,
+  MC4WP 4.14.1, Koalendar 1.0.6, Setmore 12.8, Site Kit 1.189.0, Redux 4.5.16 (theme options verified
+  unchanged), CMB2 2.13.4. Backups: `private-backups-moved-from-public_html/plugins-before-update/`.
+- Left for a supervised update: Elementor 4.1.4 → 4.3.5, AIOSEO 4.9.10 → 5.0.3, TranslatePress 3.2.3 → 3.3.8
+  (larger changes that can affect layout or settings), and WPS Hide Login (controls the login URL).
+
 ## Needs your decision or input
 1. Confirm these FAQ answers before publishing: campaigns run in the client's own ad accounts; ad spend is paid
    to the platform, not included in the fee; first 2–4 weeks are testing; you audit tracking before spending.
