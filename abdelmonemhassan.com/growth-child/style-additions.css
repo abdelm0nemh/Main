@@ -1,0 +1,18 @@
+/* Appended to growth-child/style.css (theme Version bumped 1.0.0 -> 1.0.1) */
+
+/* Page titles are H1 now (they were H3): keep the old spacing. */
+.header-area h1.page-title{margin:0}
+
+/* Author box under blog posts */
+.monem-author-box{display:flex;gap:24px;align-items:flex-start;margin:50px 0 10px;padding:30px;border-radius:8px;background:#313552}
+.monem-author-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;flex:0 0 96px}
+.monem-author-label{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#ffc576}
+.monem-author-name{display:inline-block;margin:4px 0 10px;font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff}
+.monem-author-name:hover{color:#ffc576}
+.monem-author-text p{margin:0 0 18px;color:#fff;opacity:.85}
+@media (max-width:575px){.monem-author-box{flex-direction:column;padding:22px}}
+
+/* Centred button (FAQ section call to action) */
+.monem-center .elementor-widget-container{text-align:center}
+/* FAQ accordion: answers keep the theme's link colour */
+.monem-faq .elementor-tab-content a{color:#ffc576;text-decoration:underline}

@@ -1,0 +1,18 @@
+# BEGIN Monem security
+# Never serve database dumps, backups, logs or config leftovers from the web root
+<FilesMatch "(?i)\.(sql|sql\.gz|bak|old|orig|ini|log|sh|env)$|^(error_log|wp-config\.php|readme\.html|license\.txt|\.htaccess_.*)$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+</FilesMatch>
+Options -Indexes
+# llms.txt is written live by the child theme (inc/monem-seo.php)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^llms\.txt$ /index.php [L]
+</IfModule>
+# END Monem security
